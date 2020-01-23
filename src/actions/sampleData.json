@@ -1,0 +1,22 @@
+{
+  "products": [
+   {
+     "id": 1,
+     "name": "Kyle's Shoes",
+     "price": 50,
+     "attributes": {
+       "color": "red",
+       "size": 11
+     }
+   },
+   {
+     "id": 2,
+     "name": "Kyle's Winter Shoes",
+     "price": 75,
+     "attributes": {
+       "color": "black",
+       "size": 11
+     }
+   }
+  ]
+}
