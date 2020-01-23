@@ -17,9 +17,9 @@ const fetchProducts = () => {
 export const fetchProductsFromAPI = () => {
   return (dispatch) => {
     return fetchProducts().then(
-      (resp) => dispatch({
+      (products) => dispatch({
         type: 'UPDATE_PRODUCTS',
-        products: resp
+        products
       })
     );
   };
