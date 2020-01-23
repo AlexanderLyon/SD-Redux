@@ -17,6 +17,78 @@
        "color": "black",
        "size": 11
      }
-   }
+   },
+   {
+    "id": 3,
+    "name": "Ava's Slippers",
+    "price": 30,
+    "attributes": {
+      "color": "red",
+      "size": 8
+    }
+    },
+    {
+      "id": 4,
+      "name": "Oscar's Moccasins",
+      "price": 85,
+      "attributes": {
+        "color": "black",
+        "size": 11
+      }
+    },
+    {
+      "id": 5,
+      "name": "Cody's Boots",
+      "price": 50,
+      "attributes": {
+        "color": "brown",
+        "size": 11
+      }
+    },
+    {
+      "id": 6,
+      "name": "Shayla's Sneakers",
+      "price": 75,
+      "attributes": {
+        "color": "black",
+        "size": 11
+      }
+    },
+    {
+      "id": 7,
+      "name": "Marissa's Shoes",
+      "price": 50,
+      "attributes": {
+        "color": "red",
+        "size": 11
+      }
+    },
+    {
+      "id": 8,
+      "name": "Liam's Boots",
+      "price": 90,
+      "attributes": {
+        "color": "black",
+        "size": 12
+      }
+    },
+    {
+      "id": 9,
+      "name": "Harry's Winter Shoes",
+      "price": 50,
+      "attributes": {
+        "color": "brown",
+        "size": 7
+      }
+    },
+    {
+      "id": 10,
+      "name": "Erica's Slippers",
+      "price": 75,
+      "attributes": {
+        "color": "black",
+        "size": 10
+      }
+    }
   ]
 }
