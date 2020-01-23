@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { fetchProductsFromAPI } from './actions';
 import './App.css';
 
-const App = (props) => {
+const App = props => {
+  useEffect(() => {
+    props.fetchProducts.then(() => {
+      console.log('Products retrieved:', props.products);
+    });
+  }, []);
+
   return (
     <div className="App">
       <header>
