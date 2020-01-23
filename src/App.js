@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Grid from './components/Grid';
+import Filters from './components/Filters';
 import { connect } from 'react-redux'
 import { fetchProductsFromAPI } from './actions';
 import './App.css';
@@ -17,6 +18,7 @@ const App = props => {
         <h1>Store</h1>
       </header>
       <main>
+        <Filters/>
         <Grid/>
       </main>
     </div>
