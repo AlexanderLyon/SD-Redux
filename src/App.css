@@ -1,38 +1,110 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+  padding: 25px;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header {
+  padding: 0 10px;
+}
+
+.filters {
+  margin: 10px 0;
+  width: 20%;
+}
+
+.filter-options h4 {
+  margin: 0 0 5px;
+  font-size: 21px;
+  text-transform: capitalize;
+}
+
+.filter-options > div {
+  margin: 0 10px;
+  padding: 20px 0;
+}
+
+.filter-options > div:first-of-type {
+  padding-top: 0;
+}
+
+.filter-options > div:not(:last-of-type) {
+  border-bottom: 1px solid white;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 0 15px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-appearance: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  width: 80%;
+}
+
+.filters button,
+.product-card {
+  background-color: white;
+  color: #282c34;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.product-card:hover {
+  opacity: 0.85;
+}
+
+.product-card {
+  margin: 10px;
+  padding: 5px 20px;
+  width: 200px;
+  height: 230px;
+}
+
+.product-title {
+  font-weight: 700;
+}
+
+.product-price {
+  color: #1b821b;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App {
+    padding: 0;
+  }
+
+  .products-grid,
+  .filters {
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-card {
+    width: 100%;
   }
 }

@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import Grid from './components/Grid';
+import Filters from './components/Filters';
+import { connect } from 'react-redux'
+import { fetchProductsFromAPI } from './actions';
 import './App.css';
 
-function App() {
+const App = props => {
+  useEffect(() => {
+    props.fetchProducts.then(() => {
+      console.log('Products retrieved:', props.products);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Store</h1>
       </header>
+      <main>
+        <Filters/>
+        <Grid/>
+      </main>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  products: state
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchProducts: dispatch(fetchProductsFromAPI())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
