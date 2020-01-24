@@ -20,7 +20,7 @@ const Grid = ({ products }) => {
 }
 
 const mapStateToProps = state => ({
-  products: state
+  products: state.productsReducer
 });
 
 export default connect(mapStateToProps)(Grid);
