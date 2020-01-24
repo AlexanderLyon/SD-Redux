@@ -15,12 +15,11 @@ const fetchProducts = () => {
  * Retrieves product list from mock API
  */
 export const fetchProductsFromAPI = () => {
-  return (dispatch) => {
-    return fetchProducts().then(
-      (products) => dispatch({
-        type: 'UPDATE_PRODUCTS',
-        products
-      })
-    );
+  return async (dispatch) => {
+    const products = await fetchProducts();
+    return dispatch({
+      type: 'UPDATE_PRODUCTS',
+      products
+    });
   };
 }
